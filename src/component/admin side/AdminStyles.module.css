@@ -1,0 +1,89 @@
+.tableContainer {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+/* Styles pour la table */
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.tableContainer th {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border: 1px solid #dee2e6;
+}
+
+.tableContainer td {
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  vertical-align: middle;
+}
+
+/* Assurer que toutes les colonnes ont une largeur appropriée */
+.tableContainer th:nth-child(1), /* ID */
+.tableContainer td:nth-child(1) {
+  width: 10%;
+}
+
+.tableContainer th:nth-child(2), /* Nom d'utilisateur */
+.tableContainer td:nth-child(2) {
+  width: 25%;
+}
+
+.tableContainer th:nth-child(3), /* Email */
+.tableContainer td:nth-child(3) {
+  width: 30%;
+}
+
+.tableContainer th:nth-child(4), /* Date */
+.tableContainer td:nth-child(4) {
+  width: 20%;
+}
+
+.tableContainer th:nth-child(5), /* Actions */
+.tableContainer td:nth-child(5) {
+  width: 15%;
+  text-align: center;
+}
+
+.actionButton {
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.actionButton:hover {
+  background-color: #c82333;
+}
+
+/* Styles responsifs */
+@media (max-width: 768px) {
+  .tableContainer {
+    padding: 0.5rem;
+  }
+
+  .tableContainer th,
+  .tableContainer td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .actionButton {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+  }
+} 

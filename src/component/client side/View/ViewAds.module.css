@@ -1,0 +1,252 @@
+.container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.filterSection {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filterInput {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.filterButton {
+  padding: 0.8rem;
+  background-color: #2E7D32;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.filterButton:hover {
+  background-color: #1B5E20;
+}
+
+.mapSection {
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.adsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.adCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.adCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.adImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.adContent {
+  padding: 1.5rem;
+}
+
+.adContent h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #2E7D32;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.description {
+  color: #666;
+  margin: 1rem 0;
+}
+
+.adFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.seller {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.showOnMapButton {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #1976D2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.showOnMapButton:hover {
+  background-color: #1565C0;
+}
+
+.popup h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.popup p {
+  margin: 0.5rem 0 0;
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+.noAdsMessage {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  color: #666;
+  font-style: italic;
+}
+
+.adDetailContainer {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.adDetailImage {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.adDetailInfo {
+  flex: 1;
+}
+
+.adDetailInfo h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.adDetailInfo .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2E7D32;
+  margin-bottom: 1rem;
+}
+
+.adDetailInfo .description {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.sellerInfo {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.sellerInfo p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.reserveButton {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.reserveButton:global(.btn-danger) {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.reserveButton:global(.btn-danger):hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+@media (max-width: 1024px) {
+  .topSection {
+    grid-template-columns: 1fr;
+  }
+
+  .mapSection {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .filterGroup {
+    gap: 0.5rem;
+  }
+
+  .adDetailContainer {
+    flex-direction: column;
+  }
+
+  .adDetailImage {
+    width: 100%;
+    height: 250px;
+  }
+}

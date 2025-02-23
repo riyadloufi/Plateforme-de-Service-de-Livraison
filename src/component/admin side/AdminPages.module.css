@@ -1,0 +1,443 @@
+/* Layout de base */
+.container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pageContainer {
+  margin-left: 200px;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: #2E7D32;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contentSection {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.customTable {
+  margin-bottom: 0;
+}
+
+.customTable thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  color: #495057;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.customTable tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.statBadge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+}
+
+.actionButton {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.customModal .modal-content {
+  border-radius: 8px;
+}
+
+.modalTable {
+  margin-bottom: 0;
+}
+
+.modalTable th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.adImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.noDataMessage {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Styles de tableau */
+.tableContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Boutons d'action */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.approveButton,
+.rejectButton,
+.viewButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.approveButton {
+  background-color: #2E7D32;
+  color: white;
+}
+
+.approveButton:hover {
+  background-color: #1B5E20;
+}
+
+.rejectButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.rejectButton:hover {
+  background-color: #d32f2f;
+}
+
+.viewButton {
+  background-color: #1976D2;
+  color: white;
+}
+
+.viewButton:hover {
+  background-color: #1565C0;
+}
+
+/* Indicateurs de statut */
+.statusPublished,
+.statusActive,
+.statusPending,
+.statusAdmin {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.statusPublished {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+}
+
+.statusActive {
+  background-color: #E3F2FD;
+  color: #1976D2;
+}
+
+.statusPending {
+  background-color: #FFF3E0;
+  color: #E65100;
+}
+
+.statusAdmin {
+  background-color: #FFF3E0;
+  color: #E65100;
+}
+
+/* Compteurs dans le tableau utilisateurs */
+.publishedCount {
+  color: #2E7D32;
+  font-weight: 500;
+}
+
+.pendingCount {
+  color: #F57C00;
+  font-weight: 500;
+}
+
+.rejectedCount {
+  color: #D32F2F;
+  font-weight: 500;
+}
+
+.totalCount {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Images et médias */
+.thumbnailImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Messages et titres */
+.pageContainer h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pageContainer h2::after {
+  content: attr(data-count);
+  font-size: 0.8em;
+  background-color: #E3F2FD;
+  color: #1976D2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modalHeader {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  color: #333;
+}
+
+.modalBody {
+  padding: 20px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+/* Formulaires */
+.rejectReasonInput {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.confirmButton,
+.cancelButton {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.confirmButton {
+  background-color: #D32F2F;
+  color: white;
+}
+
+.cancelButton {
+  background-color: #9E9E9E;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .pageContainer {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .contentSection {
+    padding: 1rem;
+  }
+
+  .customTable thead th,
+  .customTable tbody td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    margin-left: 0;
+    padding: 0.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .contentSection {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+  
+  .modalContent {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .thumbnailImage {
+    width: 40px;
+    height: 40px;
+  }
+
+  .customTable thead th,
+  .customTable tbody td {
+    padding: 0.75rem;
+  }
+
+  .actionButton {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Styles complémentaires à Bootstrap */
+.table-hover tbody tr:hover {
+  background-color: rgba(0,0,0,.03);
+}
+
+.modal-content {
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+}
+
+/* Styles pour les badges de statistiques */
+.statsCell {
+  text-align: center;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 0.4em 0.8em;
+  border-radius: 20px;
+}
+
+.badge-success {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+}
+
+.badge-info {
+  background-color: #E3F2FD;
+  color: #1976D2;
+}
+
+/* Amélioration du tableau */
+.table th {
+  white-space: nowrap;
+  padding: 1rem;
+  font-weight: 600;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.table td {
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+.table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Responsive pour les colonnes de statistiques */
+@media (max-width: 768px) {
+  .statsCell {
+    min-width: 100px;
+  }
+} 

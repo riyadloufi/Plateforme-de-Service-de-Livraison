@@ -1,0 +1,171 @@
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #2E7D32;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.username {
+  color: #2E7D32;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background-color: #E8F5E9;
+  border-radius: 20px;
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: #d32f2f;
+}
+
+.authLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.loginButton,
+.signupButton {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.loginButton {
+  color: var(--secondary-color);
+  background-color: white;
+  border: 2px solid var(--secondary-color);
+}
+
+.signupButton {
+  background-color: var(--primary-color);
+  color: var(--dark-blue);
+}
+
+.signupButton:hover {
+  background-color: #e5aa3d;
+}
+
+.usernameLink {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.usernameLink:hover {
+  background-color: #f5f5f5;
+  color: #2E7D32;
+}
+
+.username {
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .userSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .authLinks {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .loginButton,
+  .signupButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logoImage {
+    height: 65px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navLinks {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .logoImage {
+    height: 50px;
+  }
+} 
